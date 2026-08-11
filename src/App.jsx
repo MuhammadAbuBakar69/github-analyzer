@@ -51,6 +51,11 @@ export default function App() {
     fetchGitHubData(username);
   }, [username]);
 
+  const copyProfileLink = async () => {
+    if (!profile?.html_url) return;
+    await navigator.clipboard.writeText(profile.html_url);
+  };
+
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchInput.trim()) {
@@ -123,6 +128,7 @@ export default function App() {
             <img src={profile.avatar_url} alt={profile.login} className="gh-avatar" />
             <div className="gh-user-info">
               <h2>{profile.name || profile.login}</h2>
+              <button className="gh-copy-link" onClick={copyProfileLink}>🔗 Copy profile link</button>
               <a
                 href={profile.html_url}
                 target="_blank"

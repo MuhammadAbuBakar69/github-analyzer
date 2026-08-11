@@ -339,3 +339,5 @@
 .repo-lang {
   color: #f0f6fc;
 }
+
+.gh-copy-link { margin: .35rem 0; background: #238636; color: #fff; }
