@@ -1,0 +1,341 @@
+/* GitHub Analyzer Dark-Themed UI */
+
+.gh-container {
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.gh-header {
+  max-width: 960px;
+  margin: 0 auto 28px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #30363d;
+}
+
+.gh-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gh-logo {
+  color: #f0f6fc;
+}
+
+.gh-title-group h1 {
+  font-size: 1.5rem;
+  color: #f0f6fc;
+  margin: 0;
+  font-weight: 600;
+}
+
+.gh-search-form {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.gh-input {
+  flex: 1;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.gh-input:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.3);
+}
+
+.gh-search-btn {
+  background-color: #238636;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.gh-search-btn:hover {
+  background-color: #2ea043;
+}
+
+.gh-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Loading & Errors */
+.gh-loading {
+  text-align: center;
+  padding: 60px 0;
+  color: #8b949e;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #30363d;
+  border-top-color: #58a6ff;
+  border-radius: 50%;
+  margin: 0 auto 16px auto;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.gh-error-card {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #161b22;
+  border: 1px solid #f85149;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  color: #f85149;
+}
+
+/* Profile Header Card */
+.gh-profile-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gh-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #30363d;
+}
+
+.gh-user-info {
+  flex: 1;
+}
+
+.gh-user-info h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f0f6fc;
+}
+
+.gh-username-link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.gh-username-link:hover {
+  text-decoration: underline;
+}
+
+.gh-bio {
+  margin: 10px 0;
+  color: #8b949e;
+  font-size: 0.95rem;
+}
+
+.gh-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin-top: 8px;
+}
+
+.gh-meta a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+/* Stats Grid */
+.gh-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-box {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #8b949e;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f0f6fc;
+}
+
+/* Languages */
+.gh-languages-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.gh-languages-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  color: #f0f6fc;
+}
+
+.gh-lang-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gh-lang-pill {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 8px;
+}
+
+.lang-name {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+.lang-count {
+  color: #8b949e;
+}
+
+/* Repositories */
+.gh-repos-section {
+  margin-top: 24px;
+}
+
+.gh-repos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.gh-repos-header h3 {
+  margin: 0;
+  color: #f0f6fc;
+}
+
+.gh-sort-controls select {
+  background-color: #161b22;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  padding: 6px 12px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.gh-repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.gh-repo-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s;
+}
+
+.gh-repo-card:hover {
+  border-color: #58a6ff;
+}
+
+.repo-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.repo-title {
+  color: #58a6ff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.repo-title:hover {
+  text-decoration: underline;
+}
+
+.repo-badge {
+  font-size: 0.7rem;
+  border: 1px solid #30363d;
+  padding: 2px 6px;
+  border-radius: 12px;
+  color: #8b949e;
+}
+
+.repo-desc {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin: 10px 0 16px 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-footer {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.repo-lang {
+  color: #f0f6fc;
+}
